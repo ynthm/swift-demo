@@ -1,0 +1,5 @@
+module cTox [system] {
+    header "/usr/local/include/tox/tox.h"
+    link "toxcore"
+    export *
+}
