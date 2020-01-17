@@ -31,6 +31,7 @@ struct ContentView: View {
         let attributedString3 = NSMutableAttributedString(string: "Want to learn iOS? You should visit the best source of free iOS tutorials!")
         attributedString3.addAttribute(.link, value: "https://ynthm.com", range: NSRange(location: 19, length: 55))
         
+   
         
         
         let titleAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline), NSAttributedString.Key.foregroundColor: UIColor.purple]
@@ -38,11 +39,12 @@ struct ContentView: View {
         let titleString = NSAttributedString(string: "Read all about it!", attributes: titleAttributes)
         
         
-        return VStack {
+        return
+            List {
             TextWithAttributedString(attributedString: attributedString)
             TextWithAttributedString(attributedString: attributedString1)
             TextWithAttributedString(attributedString: titleString)
-            YTextView(attributedString: attributedString3)
+                YTextView(attributedString: attributedString3)
         }
     }
     
